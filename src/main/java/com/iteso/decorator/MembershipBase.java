@@ -1,24 +1,25 @@
-package com.iteso.decorator.memberships;
-
-import com.iteso.decorator.Membership;
+package com.iteso.decorator;
 
 import java.util.ArrayList;
 
+/**
+ * asdfasdf.
+ */
 public class MembershipBase extends Membership {
 
     /**
-     * constructor
+     * constructor.
      */
     public MembershipBase() {
         setBenefits(new ArrayList());
     }
     @Override
-    public ArrayList getAllBenefits() {
+    public final ArrayList getAllBenefits() {
         return getBenefits();
     }
 
     @Override
-    public double getCost() {
+    public final double getCost() {
         return 0;
     }
 }

@@ -10,20 +10,36 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
+    /**
+     * benefits.
+     */
+    private ArrayList benefits;
 
-    ArrayList benefits;
-
-    public ArrayList getBenefits() {
+    /**
+     * get.
+     * @return benefits
+     */
+    public final ArrayList getBenefits() {
         return benefits;
     }
 
-    public void setBenefits(ArrayList benefits) {
-        this.benefits = benefits;
+    /**
+     * set.
+     * @param b benefits
+     */
+    public final void setBenefits(final ArrayList b) {
+        this.benefits = b;
     }
 
+    /**
+     * all.
+     * @return benefits
+     */
     public abstract ArrayList getAllBenefits();
 
+    /**
+     * cost.
+     * @return cost
+     */
     public abstract double getCost();
-
-
 }

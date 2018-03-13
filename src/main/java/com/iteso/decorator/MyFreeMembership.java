@@ -1,38 +1,51 @@
 package com.iteso.decorator;
 
-import com.iteso.decorator.memberships.*;
 
+import com.iteso.decorator.benefits.AllowedDevices1;
+import com.iteso.decorator.benefits.CloudStorage50;
+import com.iteso.decorator.benefits.DownloadCapacity150;
+import com.iteso.decorator.benefits.SimultaneousLogins1;
+
+/**
+ * free.
+ */
 public class MyFreeMembership {
     /**
-     * type
+     * type.
      */
-    public static String typeMembership = "Free Membership";
+    private static final String TYPE = "Free Membership";
 
-
-    public static final int DOWNLOAD_CAPACITY = 150;
-    public static final int COST = 0;
-    public static final int CLOUD_STORAGE = 50;
-    public static final int ALLOWED_DEVICES = 1;
-    public static final String GOLD_MEMBERSHIP = "Free Membership";
-    public static final int SIMULTANEOUS_LOGINS = 1;
-    public static final boolean SUPPORT = false;
-    public static final String FREE = "Free";
-    public static final boolean UNLIMITED_DEVICES = false;
-
-    public MyFreeMembership(){
+    /**
+     * constructor.
+     */
+    public MyFreeMembership() {
         Membership membership = new MembershipBase();
         membership = new DownloadCapacity150(membership);
         membership = new CloudStorage50(membership);
         membership = new AllowedDevices1(membership);
         membership = new SimultaneousLogins1(membership);
 
-        System.out.println(typeMembership);
+        System.out.println(TYPE);
 
-        for(int i = 0; i < membership.getAllBenefits().size(); i++) {
+        for (int i = 0; i < membership.getAllBenefits().size(); i++) {
             System.out.println(membership.getAllBenefits().get(i));
         }
         System.out.println(membership.getCost());
         System.out.println();
         System.out.println();
+    }
+
+    /**
+     * asfdaf.
+     * @return asdf
+     */
+    public static String getType() {
+        return TYPE;
+    }
+    /**
+     * metodo tonto para checkstyle.
+     */
+    public void something() {
+
     }
 }

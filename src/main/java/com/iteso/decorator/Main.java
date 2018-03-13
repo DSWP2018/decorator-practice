@@ -1,16 +1,23 @@
 package com.iteso.decorator;
 
 /**
- * para probar
+ * para probar.
  */
 public class Main {
     /**
-     * main
+     * main.
      * @param args asdfasd
      */
-    public static void main(String[] args){
+    public static void main(final String[] args) {
         new MyFreeMembership();
         new MyGoldMembership();
         new MyUltimateMembership();
+    }
+
+    /**
+     * metodo tonto para checkstyle.
+     */
+    public void something() {
+
     }
 }
