@@ -1,4 +1,4 @@
-package com.iteso.decorator;
+package com.iteso.decorator.memberships.memberships;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,8 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
-    private String description = "Any Membership";
+
+    public String description = "A Member";
 private int cloudStorage = 0;
 private int simultaneousLogins = 0;
 private boolean unlimitedDevices = false;
@@ -24,7 +25,7 @@ private String supportCoverage = null;
     public String getDescription(){
         return description;
     }
-    public abstract ArrayList getAllBenefits();
+    /*public abstract ArrayList getAllBenefits();*/
 
     public void setDescription(String description) {
         this.description = description;

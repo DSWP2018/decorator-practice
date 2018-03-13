@@ -1,6 +1,4 @@
-package com.iteso.decorator.memberships;
-
-import com.iteso.decorator.Membership;
+package com.iteso.decorator.memberships.memberships;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,4 @@
-package com.iteso.decorator.memberships;
-
-import com.iteso.decorator.Membership;
+package com.iteso.decorator.memberships.memberships;
 
 import java.util.ArrayList;
 
@@ -36,3 +34,19 @@ public class FreeMembership extends Membership {
         return null;
     }
 }
+
+public class FreeMembership extends Membership{
+public UserGold(){
+
+}
+}
+/*
+public class UserGold extends User {
+    public UserGold(){
+        description = "Usuario oro";
+    }
+
+    public double price() {
+        return 50.0;
+    }
+}*/

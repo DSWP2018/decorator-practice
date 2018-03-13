@@ -1,6 +1,4 @@
-package com.iteso.decorator.memberships;
-
-import com.iteso.decorator.Membership;
+package com.iteso.decorator.memberships.memberships;
 
 import java.util.ArrayList;
 
@@ -9,8 +7,7 @@ import java.util.ArrayList;
  */
 public class GoldMembership extends Membership {
 
-
-    public static final int DOWNLOAD_CAPACITY = 1000;
+    /*public static final int DOWNLOAD_CAPACITY = 1000;
     public static final int COST = 599;
     public static final int CLOUD_STORAGE = 500;
     public static final int ALLOWED_DEVICES = 10;
@@ -18,10 +15,17 @@ public class GoldMembership extends Membership {
     public static final int SIMULTANEOUS_LOGINS = 3;
     public static final boolean SUPPORT = true;
     public static final String GOLD = "Gold";
-    public static final boolean UNLIMITED_DEVICES = false;
+    public static final boolean UNLIMITED_DEVICES = false;*/
 
-    public GoldMembership() {
-        setAllowedDevices(ALLOWED_DEVICES);
+    public GoldMembership() { description = "Gold"; }
+
+        public int DOWNLOAD_CAPACITY(){ return 1000;}
+        public int COST(){ return 599;}
+        public int CLOUD_STORAGE(){ return 500; }
+        public int ALLOWED_DEVICES(){return 10; }
+        public int 
+
+        /*setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
         setCost(COST);
         setDescription(GOLD_MEMBERSHIP);
@@ -29,10 +33,6 @@ public class GoldMembership extends Membership {
         setSimultaneousLogins(SIMULTANEOUS_LOGINS);
         setSupport(SUPPORT);
         setSupportCoverage(GOLD);
-        setUnlimitedDevices(UNLIMITED_DEVICES);
-    }
+        setUnlimitedDevices(UNLIMITED_DEVICES);*/
 
-    public ArrayList getAllBenefits() {
-        return null;
-    }
 }
