@@ -1,13 +1,13 @@
 package com.iteso.decorator.memberships;
 
+import com.iteso.decorator.BenefitDecorator;
 import com.iteso.decorator.Benefits.AllowedDevices;
 import com.iteso.decorator.Benefits.CloudStorage;
 import com.iteso.decorator.Benefits.DownloadCapacity;
 import com.iteso.decorator.Benefits.SimultaneousLogins;
 import com.iteso.decorator.Benefits.Support;
 import com.iteso.decorator.Membership;
-
-import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created by rvillalobos on 4/14/16.
@@ -75,7 +75,7 @@ public class FreeMembership extends Membership {
     /**
      * @return null always.
      */
-    public final  ArrayList getAllBenefits() {
+    public final Vector<BenefitDecorator> getAllBenefits() {
         return getBenefits();
     }
 }

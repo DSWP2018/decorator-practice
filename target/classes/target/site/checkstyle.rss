@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 2,
+      <title>File: 4,
              Errors: 19,
              Warnings: 0,
              Infos: 0
@@ -46,6 +46,34 @@ under the License.
           <tbody>
                           <tr>
                 <td>
+                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Membership.java">com/iteso/decorator/Membership.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.package-info.java">com/iteso/decorator/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://maven.apache.org/checkstyle.html#com.iteso.test.FreeMembershipTest.java">com/iteso/test/FreeMembershipTest.java</a>
                 </td>
                 <td>
@@ -60,7 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Benefits.Support.java">com/iteso/decorator/Benefits/Support.java</a>
+                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.memberships.package-info.java">com/iteso/decorator/memberships/package-info.java</a>
                 </td>
                 <td>
                   0

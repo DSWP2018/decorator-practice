@@ -41,7 +41,7 @@ public class Support extends BenefitDecorator {
         } else if (supportType == 2) {
             support = true;
             mem.setCost(mem.getCost() + GLD);
-            setDesc("Golden Support support");
+            setDesc("Golden Support");
         }
 
 

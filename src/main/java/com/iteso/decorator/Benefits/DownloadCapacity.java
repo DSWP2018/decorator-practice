@@ -21,7 +21,7 @@ public class DownloadCapacity extends BenefitDecorator {
     public DownloadCapacity(final int newCapacity, final Membership mem) {
         setMembership(mem);
         mem.setCost(mem.getCost() + newCapacity * MUL);
-        setDesc("Devices Allowed: " + newCapacity);
+        setDesc("Download Capacity: " + newCapacity);
     }
 
 

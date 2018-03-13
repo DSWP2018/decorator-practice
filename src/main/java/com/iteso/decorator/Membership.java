@@ -1,6 +1,6 @@
 package com.iteso.decorator;
 
-import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +14,7 @@ public abstract class Membership {
     /**
      * List of al benefits.
      */
-    private ArrayList<BenefitDecorator> beneficts;
+    private Vector<BenefitDecorator> beneficts = new Vector<BenefitDecorator>();
 
     /**
      * Cost of the product.
@@ -31,7 +31,14 @@ public abstract class Membership {
      * @return description.
      */
     public final String getDescription() {
-        return description;
+        String des = description;
+        int x;
+
+        for (x = 0; x < beneficts.size() - 1; x++) {
+            des = des + "\n" + beneficts.elementAt(x).getDesc();
+        }
+
+        return des;
     }
 
     /**
@@ -58,7 +65,7 @@ public abstract class Membership {
     /**
      * @return all the benefits.
      */
-    public final ArrayList<BenefitDecorator> getBenefits() {
+    public final Vector<BenefitDecorator> getBenefits() {
         return beneficts;
     }
 

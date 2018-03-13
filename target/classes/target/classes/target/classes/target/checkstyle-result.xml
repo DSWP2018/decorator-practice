@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.18">
-<file name="/Users/federicoibarra/Google Drive/ITESO/6to/Diseño/Practica2/decorator-practice/src/main/java/com/iteso/decorator/Benefits/Support.java">
+<file name="/Users/federicoibarra/Google Drive/ITESO/6to/Diseño/Practica2/decorator-practice/src/main/java/com/iteso/decorator/Membership.java">
+</file>
+<file name="/Users/federicoibarra/Google Drive/ITESO/6to/Diseño/Practica2/decorator-practice/src/main/java/com/iteso/decorator/memberships/package-info.java">
+</file>
+<file name="/Users/federicoibarra/Google Drive/ITESO/6to/Diseño/Practica2/decorator-practice/src/main/java/com/iteso/decorator/package-info.java">
 </file>
 <file name="/Users/federicoibarra/Google Drive/ITESO/6to/Diseño/Practica2/decorator-practice/src/main/java/com/iteso/test/FreeMembershipTest.java">
 <error line="0" severity="error" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
