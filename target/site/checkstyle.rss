@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 6,
-             Errors: 70,
+      <title>File: 1,
+             Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
@@ -46,63 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Membership.java">com/iteso/decorator/Membership.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Benefits.DownloadCapacity.java">com/iteso/decorator/Benefits/DownloadCapacity.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  21
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Benefits.CloudStorage.java">com/iteso/decorator/Benefits/CloudStorage.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  20
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.memberships.package-info.java">com/iteso/decorator/memberships/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Benefits.package-info.java">com/iteso/decorator/Benefits/package-info.java</a>
+                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.memberships.FreeMembership.java">com/iteso/decorator/memberships/FreeMembership.java</a>
                 </td>
                 <td>
                   0
@@ -112,20 +56,6 @@ under the License.
                 </td>
                 <td>
                   0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#com.iteso.decorator.Benefits.UnlimitedStorage.java">com/iteso/decorator/Benefits/UnlimitedStorage.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  18
                 </td>
               </tr>
                       </tbody>

@@ -1,5 +1,10 @@
 package com.iteso.decorator.memberships;
 
+import com.iteso.decorator.Benefits.AllowedDevices;
+import com.iteso.decorator.Benefits.CloudStorage;
+import com.iteso.decorator.Benefits.DownloadCapacity;
+import com.iteso.decorator.Benefits.SimultaneousLogins;
+import com.iteso.decorator.Benefits.Support;
 import com.iteso.decorator.Membership;
 
 import java.util.ArrayList;
@@ -58,21 +63,19 @@ public class FreeMembership extends Membership {
      * SET ALL VARIABLES.
      */
     public FreeMembership() {
-        setAllowedDevices(ALLOWED_DEVICES);
-        setCloudStorage(CLOUD_STORAGE);
         setCost(COST);
         setDescription(GOLD_MEMBERSHIP);
-        setDownloadCapacity(DOWNLOAD_CAPACITY);
-        setSimultaneousLogins(SIMULTANEOUS_LOGINS);
-        setSupport(SUPPORT);
-        setSupportCoverage(FREE);
-        setUnlimitedDevices(UNLIMITED_DEVICES);
+        getBenefits().add(new AllowedDevices(ALLOWED_DEVICES, this));
+        getBenefits().add(new CloudStorage(CLOUD_STORAGE, this));
+        getBenefits().add(new DownloadCapacity(DOWNLOAD_CAPACITY, this));
+        getBenefits().add(new SimultaneousLogins(SIMULTANEOUS_LOGINS, this));
+        getBenefits().add(new Support(1,  this));
     }
 
     /**
      * @return null always.
      */
     public final  ArrayList getAllBenefits() {
-        return null;
+        return getBenefits();
     }
 }

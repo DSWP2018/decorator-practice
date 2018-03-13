@@ -7,32 +7,21 @@ import com.iteso.decorator.Membership;
  * Created by Federico Ibarra.
  */
 public class SimultaneousLogins extends BenefitDecorator {
-    /**
-     * Multiplicador del costo.
-     */
-    private static final double MULT = 0.8;
 
     /**
-     * base membership that is been decorated.
+     * How much Storage costs.
      */
-    private Membership membership;
+    private static final double MUL = 0.3;
 
     /**
-     * @param newLogins new logins.
-     * @param mem base memnership.
+     * @param newLogins new Logins.
+     * @param mem base membership.
      */
     public SimultaneousLogins(final int newLogins, final Membership mem) {
-        membership = mem;
-        mem.setSimultaneousLogins(mem.getSimultaneousLogins() + newLogins);
-        mem.setCost(mem.getCost() + (newLogins * MULT));
-        mem.setDescription(mem.getDescription()
-                           + " plus " + mem.getSimultaneousLogins()
-                           + " of Simultaneous Logins");
+        setMembership(mem);
+        mem.setCost(mem.getCost() + newLogins * MUL);
+        setDesc("Simultaneous Logins: " + newLogins);
     }
 
-    @Override
-    public final String getDescription() {
-        return membership.getDescription();
-    }
 
 }

@@ -9,29 +9,38 @@ import com.iteso.decorator.Membership;
 public class AllowedDevices extends BenefitDecorator {
 
     /**
-     * Multiplicador del costo.
+     * How much Storage costs.
      */
-    private static final double MULT = 0.2;
+    private static final double MUL = 0.2;
 
     /**
-     * base membership that is been decorated.
+     * Unlimited devices price.
      */
-    private Membership membership;
+    private static final int UNLP = 1000;
 
     /**
-     * @param newDevices new amount of devices.
+     * If the the allowed devices are unlimited then this is true.
+     */
+    private boolean unlimitedState;
+
+    /**
+     * @param newDevices new amount of storage.
      * @param mem base membership.
      */
     public AllowedDevices(final int newDevices, final Membership mem) {
-        membership = mem;
-        mem.setDownloadCapacity(mem.getAllowedDevices() + newDevices);
-        mem.setCost(mem.getCost() + (newDevices * MULT));
-        mem.setDescription(mem.getDescription() + " of Allowed devices");
+        setMembership(mem);
+
+        if (newDevices == -1) {
+            mem.setCost(mem.getCost() + UNLP);
+            setDesc("Unlimited Devices Allowed");
+            unlimitedState = true;
+        } else {
+            mem.setCost(mem.getCost() + newDevices * MUL);
+            setDesc("Devices Allowed: " + newDevices);
+            unlimitedState = false;
+        }
+
     }
 
-    @Override
-    public final String getDescription() {
-        return membership.getDescription();
-    }
 
 }

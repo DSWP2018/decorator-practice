@@ -6,8 +6,42 @@ package com.iteso.decorator;
 public abstract class BenefitDecorator extends Membership {
 
     /**
-     * @return the new description.
+     * Base membership.
      */
-    public abstract String getDescription();
+    private Membership membership;
+
+    /**
+     * Added description.
+     */
+    private String description;
+
+    /**
+     * @param mem membership.
+     */
+    public final void setMembership(final Membership mem) {
+        membership = mem;
+    }
+
+    /**
+     * @return membership.
+     */
+    public final Membership getMembership() {
+        return membership;
+    }
+
+    /**
+     * @param des description.
+     */
+    public final void setDesc(final String des) {
+        description = des;
+    }
+
+    /**
+     * @return description.
+     */
+    public final String getDesc() {
+        return description;
+    }
+
 
 }
