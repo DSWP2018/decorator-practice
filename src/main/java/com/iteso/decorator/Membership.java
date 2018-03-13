@@ -14,7 +14,7 @@ public abstract class Membership {
     /**Attributes of the basic Membership. */
     private String description = "Membership"; /**Description of the membership. */
     private double cost = 0; /**Actual cost of the membership. */
-    private ArrayList benefits; /**List of all the benefits. */
+    private ArrayList benefits = new ArrayList(); /**List of all the benefits. */
 
     /**Method getDescription. /*
      *
@@ -24,8 +24,12 @@ public abstract class Membership {
         return description;
     }
 
+    /**Method setDescription. /*
+     *
+     * @param newFeature string with the new feature.
+     */
     public void setDescription(String newFeature){
-        this.description += newFeature;
+        this.description += " " + newFeature;
     }
 
     /**Method getAllBenefits. /*

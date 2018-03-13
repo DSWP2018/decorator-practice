@@ -19,8 +19,10 @@ public class GoldMembership extends Benefits {
      */
     public GoldMembership(Membership membership){
         this.membership = membership;
+
         this.membership.setDescription(getBenefitDescription());
         this.membership.setBenefits(GOLD_MEMBERSHIP_NAME);
+
         this.membership = new CloudStorage(this);
         this.membership = new Support(this);
     }
