@@ -11,15 +11,24 @@ import java.util.ArrayList;
  */
 public abstract class Membership {
 
-    private ArrayList<Object> benefits;
+    /**
+     *
+     */
+    private ArrayList<Benefit> benefits;
+    /**
+     *
+     */
     private String membershipDescription;
+    /**
+     *
+     */
     private int membershipCost;
 
     /**
      *
-     * @return
+     * @return the benefits
      */
-    public ArrayList getAllBenefits(){
+    public final ArrayList<Benefit> getAllBenefits() {
         return benefits;
     }
 
@@ -30,33 +39,40 @@ public abstract class Membership {
 
     /**
      *
-     * @return
+     * @return cost
      */
-    public int getMembershipCost(){
+    public final int getMembershipCost() {
         return membershipCost;
     }
 
     /**
      *
-     * @return
+     * @return description
      */
-    public String getMembershipDescription() {
+    public final String getMembershipDescription() {
         return membershipDescription;
     }
 
     /**
      *
-     * @param membershipCost
+     * @param membCost to define cost
      */
-    public void setMembershipCost(int membershipCost) {
-        this.membershipCost = membershipCost;
+    public final void setMembershipCost(final int membCost) {
+        this.membershipCost = membCost;
     }
 
     /**
      *
-     * @param membershipDescription
+     * @param membDesc to define description
      */
-    public void setMembershipDescription(String membershipDescription) {
-        this.membershipDescription = membershipDescription;
+    public final void setMembershipDescription(final String membDesc) {
+        this.membershipDescription = membDesc;
+    }
+
+    /**
+     *
+     */
+    public final void initArrayList() {
+        benefits = new ArrayList<Benefit>();
     }
 }

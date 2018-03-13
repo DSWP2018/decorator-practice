@@ -1,30 +1,27 @@
 package com.iteso.decorator;
+
+import java.util.ArrayList;
+
 /**
  *
  */
 public abstract class Benefits extends Membership {
 
-    /*
-     *
-     */
-    Membership membership;
-
     /**
      *
-     * @param mem
+     * @param cost the cost of the membership
+     * @param description the description of the membership
+     * @param baseBenefit base benefits
      */
-    public void setMembership(Membership mem){
-        membership = mem;
+    public  final void initMembership(final int cost,
+                               final String description,
+                               final ArrayList<Benefit>
+                                       baseBenefit) {
+        setMembershipCost(cost);
+        setMembershipDescription(description);
+        initArrayList();
+        for (Benefit benefit: baseBenefit) {
+            getAllBenefits().add(benefit);
+        }
     }
-
-    /**
-     *
-     * @return
-     */
-    public Membership getMembership(){
-        return membership;
-    }
-
-
-
 }
