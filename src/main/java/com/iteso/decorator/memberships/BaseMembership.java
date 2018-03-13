@@ -8,21 +8,18 @@ import java.util.ArrayList;
 /**
  * Created by rvillalobos on 4/14/16.
  */
-public class UltimateMembership extends Benefits {
-    public static final int DOWNLOAD_CAPACITY = 3000;
-public static final int COST = 1299;
-public static final int CLOUD_STORAGE = 1000;
-public static final int ALLOWED_DEVICES = -1;
-public static final String GOLD_MEMBERSHIP = "Ultimate Membership";
-public static final int SIMULTANEOUS_LOGINS = 20;
-public static final boolean SUPPORT = true;
-public static final String ULTIMATE = "Ultimate";
-public static final boolean UNLIMITED_DEVICES = true;
+public class BaseMembership extends Membership {
+    public static final int DOWNLOAD_CAPACITY = 150;
+public static final int COST = 0;
+public static final int CLOUD_STORAGE = 50;
+public static final int ALLOWED_DEVICES = 1;
+public static final String GOLD_MEMBERSHIP = "Free Membership";
+public static final int SIMULTANEOUS_LOGINS = 1;
+public static final boolean SUPPORT = false;
+public static final String FREE = "Free";
+public static final boolean UNLIMITED_DEVICES = false;
 
-    private Membership membership;
-
-    public UltimateMembership( final Membership mem ) {
-        super(mem);
+    public BaseMembership() {
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
         setCost(COST);
@@ -30,9 +27,9 @@ public static final boolean UNLIMITED_DEVICES = true;
         setDownloadCapacity(DOWNLOAD_CAPACITY);
         setSimultaneousLogins(SIMULTANEOUS_LOGINS);
         setSupport(SUPPORT);
-        setSupportCoverage(ULTIMATE);
+        setSupportCoverage(FREE);
         setUnlimitedDevices(UNLIMITED_DEVICES);
-        setDescription("Membresía ultimate");
+        setDescription("Membresía gratuita");
     }
 
     @Override public ArrayList<String> getAllBenefits() {

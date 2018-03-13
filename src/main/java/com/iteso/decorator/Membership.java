@@ -19,12 +19,14 @@ private double cost = 0;
 private int downloadCapacity = 0;
 private boolean support = false;
 private String supportCoverage = null;
+protected ArrayList<String> allBenefits = new ArrayList<>();
 
 
     public String getDescription(){
         return description;
     }
-    public abstract ArrayList getAllBenefits();
+
+    public abstract ArrayList<String> getAllBenefits();
 
     public void setDescription(String description) {
         this.description = description;
