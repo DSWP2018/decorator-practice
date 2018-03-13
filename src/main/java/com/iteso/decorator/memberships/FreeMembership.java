@@ -9,17 +9,54 @@ import java.util.ArrayList;
  */
 public class FreeMembership extends Membership {
 
-
+    /**
+     * BASE DOWNLOAD_CAPACITY.
+     */
     public static final int DOWNLOAD_CAPACITY = 150;
+
+    /**
+     * BASE COST.
+     */
     public static final int COST = 0;
+
+    /**
+     * BASE CLOUD STORAGE.
+     */
     public static final int CLOUD_STORAGE = 50;
+
+    /**
+     * BASE ALLOWED DEVICES.
+     */
     public static final int ALLOWED_DEVICES = 1;
+
+    /**
+     * BASE GOLD MEMBERSHIP.
+     */
     public static final String GOLD_MEMBERSHIP = "Free Membership";
+
+    /**
+     * SIMULTANEOUS LOGIS.
+     */
     public static final int SIMULTANEOUS_LOGINS = 1;
+
+    /**
+     * BASE SUPORT BOOLEAN.
+     */
     public static final boolean SUPPORT = false;
+
+    /**
+     * BASE SUPORT.
+     */
     public static final String FREE = "Free";
+
+    /**
+     * BASE UNLIMITED DEVICES LOCKED.
+     */
     public static final boolean UNLIMITED_DEVICES = false;
 
+    /**
+     * SET ALL VARIABLES.
+     */
     public FreeMembership() {
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
@@ -32,7 +69,10 @@ public class FreeMembership extends Membership {
         setUnlimitedDevices(UNLIMITED_DEVICES);
     }
 
-    public ArrayList getAllBenefits() {
+    /**
+     * @return null always.
+     */
+    public final  ArrayList getAllBenefits() {
         return null;
     }
 }

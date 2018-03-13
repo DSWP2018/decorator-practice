@@ -1,5 +1,10 @@
 package com.iteso.decorator;
 
+import com.iteso.decorator.Benefits.AllowedDevices;
+import com.iteso.decorator.Benefits.CloudStorage;
+import com.iteso.decorator.Benefits.DownloadCapacity;
+import com.iteso.decorator.Benefits.SimultaneousLogins;
+
 import java.util.ArrayList;
 
 /**
@@ -10,87 +15,178 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
+
+    /**
+     * just description.
+     */
     private String description = "Any Membership";
-private int cloudStorage = 0;
-private int simultaneousLogins = 0;
-private boolean unlimitedDevices = false;
-private int allowedDevices = 0;
-private double cost = 0;
-private int downloadCapacity = 0;
-private boolean support = false;
-private String supportCoverage = null;
 
+    /**
+     * just cloudStorage.
+     */
+    private int cloudStorage = 0;
 
-    public String getDescription(){
+    /**
+     * just simultaneousLogins.
+     */
+    private int simultaneousLogins = 0;
+
+    /**
+     * just unlimitedDevices.
+     */
+    private boolean unlimitedDevices = false;
+
+    /**
+     * just allowedDevices.
+     */
+    private int allowedDevices = 0;
+
+    /**
+     * just cost.
+     */
+    private double cost = 0;
+
+    /**
+     * just downloadCapacity.
+     */
+    private int downloadCapacity = 0;
+
+    /**
+     * just support.
+     */
+    private boolean support = false;
+
+    /**
+     * just supportCoverage.
+     */
+    private String supportCoverage = null;
+
+    /**
+     * @return description.
+     */
+    public final String getDescription() {
         return description;
     }
-    public abstract ArrayList getAllBenefits();
 
-    public void setDescription(String description) {
+    /**
+     * @param description new description.
+     */
+    public final void setDescription(final String description) {
         this.description = description;
     }
 
-    public int getCloudStorage() {
+    /**
+     * @return total amount of cloud storage.
+     */
+    public final int getCloudStorage() {
         return cloudStorage;
     }
 
-    public void setCloudStorage(int cloudStorage) {
-        this.cloudStorage = cloudStorage;
+    /**
+     * @param cloudStorage new cloud storage.
+     */
+    public final  void setCloudStorage(final int cloudStorage) {
+        CloudStorage cs = new CloudStorage(cloudStorage, this);
     }
 
-    public int getSimultaneousLogins() {
+    /**
+     * @return total amount of simultaneous.
+     */
+    public final  int getSimultaneousLogins() {
         return simultaneousLogins;
     }
 
-    public void setSimultaneousLogins(int simultaneousLogins) {
-        this.simultaneousLogins = simultaneousLogins;
+    /**
+     *
+     * @param newLogins new logins.
+     */
+    public final  void setSimultaneousLogins(final int newLogins) {
+        SimultaneousLogins s = new SimultaneousLogins(newLogins, this);
     }
 
-    public boolean isUnlimitedDevices() {
+    /**
+     * @return true if unlimited devices is true.
+     */
+    public final  boolean isUnlimitedDevices() {
         return unlimitedDevices;
     }
 
-    public void setUnlimitedDevices(boolean unlimitedDevices) {
+    /**
+     * @param unlimitedDevices boolean that unlocks unlimited devices.
+     */
+    public final  void setUnlimitedDevices(final boolean unlimitedDevices) {
         this.unlimitedDevices = unlimitedDevices;
     }
 
-    public int getAllowedDevices() {
+    /**
+     * @return total amount of cloud storage.
+     */
+    public final  int getAllowedDevices() {
         return allowedDevices;
     }
 
-    public void setAllowedDevices(int allowedDevices) {
-        this.allowedDevices = allowedDevices;
+    /**
+     * @param allowedDevices new allowed devices.
+     */
+    public final  void setAllowedDevices(final int allowedDevices) {
+        AllowedDevices ad = new AllowedDevices(allowedDevices, this);
     }
 
-    public double getCost() {
+    /**
+     * @return total cost.
+     */
+    public final  double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    /**
+     * @param cost new cost.
+     */
+    public final  void setCost(final double cost) {
         this.cost = cost;
     }
 
-    public int getDownloadCapacity() {
+    /**
+     * @return total amount of dwonload capacity.
+     */
+    public final  int getDownloadCapacity() {
         return downloadCapacity;
     }
 
-    public void setDownloadCapacity(int downloadCapacity) {
-        this.downloadCapacity = downloadCapacity;
+    /**
+     * @param downloadCapacity new download capacity.
+     */
+    public final  void setDownloadCapacity(final int downloadCapacity) {
+
+        DownloadCapacity newDc = new DownloadCapacity(downloadCapacity, this);
     }
 
-    public boolean isSupport() {
+    /**
+     * @return true if there is support.
+     */
+    public final  boolean isSupport() {
         return support;
     }
 
-    public void setSupport(boolean support) {
+    /**
+     * @param support boolean that shows the state of support.
+     */
+    public final  void setSupport(final boolean support) {
         this.support = support;
     }
 
-    public String getSupportCoverage() {
+
+    /**
+     * @return the type of coverage.
+     */
+    public final  String getSupportCoverage() {
         return supportCoverage;
     }
 
-    public void setSupportCoverage(String supportCoverage) {
+    /**
+     * @param supportCoverage new support type.
+     */
+    public final  void setSupportCoverage(final String supportCoverage) {
         this.supportCoverage = supportCoverage;
     }
 }
