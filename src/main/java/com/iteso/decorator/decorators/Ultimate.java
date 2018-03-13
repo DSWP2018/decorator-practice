@@ -1,30 +1,55 @@
-package com.iteso.decorator.memberships;
+package com.iteso.decorator.decorators;
 
 import com.iteso.decorator.Membership;
 
 import java.util.ArrayList;
 
-/**
- * Created by rvillalobos on 4/14/16.
- */
-public class UltimateMembership extends Membership {
+public class Ultimate extends Benefits{
+
 
 
     public static final int DOWNLOAD_CAPACITY = 3000;
+    /*
+    * variable de UltimateMembership
+    * */
     public static final int COST = 1299;
+    /*
+    * variable de UltimateMembership
+    * */
     public static final int CLOUD_STORAGE = 1000;
+    /*
+    * variable de UltimateMembership
+    * */
     public static final int ALLOWED_DEVICES = -1;
-    public static final String GOLD_MEMBERSHIP = "Ultimate Membership";
+    /*
+    * variable de UltimateMembership
+    * */
+    public static final String ULTIMATE_MEMBERSHIP = "Ultimate Membership";
+    /*
+    * variable de UltimateMembership
+    * */
     public static final int SIMULTANEOUS_LOGINS = 20;
+    /*
+    * variable de UltimateMembership
+    * */
     public static final boolean SUPPORT = true;
+    /*
+    * variable de UltimateMembership
+    * */
     public static final String ULTIMATE = "Ultimate";
+    /*
+    *variable de UltimateMembership
+     *  */
     public static final boolean UNLIMITED_DEVICES = true;
+    /*
+    *variable de UltimateMembership  */
 
-    public UltimateMembership() {
+    public Ultimate(Membership base) {
+        super(base);
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
         setCost(COST);
-        setDescription(GOLD_MEMBERSHIP);
+        setDescription(ULTIMATE_MEMBERSHIP);
         setDownloadCapacity(DOWNLOAD_CAPACITY);
         setSimultaneousLogins(SIMULTANEOUS_LOGINS);
         setSupport(SUPPORT);
@@ -35,4 +60,5 @@ public class UltimateMembership extends Membership {
     public ArrayList getAllBenefits() {
         return null;
     }
+
 }
