@@ -1,15 +1,8 @@
-package com.iteso.decorator.memberships;
-
-import com.iteso.decorator.Benefits;
-import com.iteso.decorator.Membership;
+package com.iteso.decorator;
 
 import java.util.ArrayList;
 
-/**
- * Created by rvillalobos on 4/14/16.
- */
-public class FreeMembership extends Benefits {
-
+public class BaseMembership extends Membership{
 
     public static final int DOWNLOAD_CAPACITY = 150;
     public static final int COST = 0;
@@ -21,8 +14,7 @@ public class FreeMembership extends Benefits {
     public static final String FREE = "Free";
     public static final boolean UNLIMITED_DEVICES = false;
 
-    public FreeMembership(Membership membership) {
-        super(membership);
+    public BaseMembership() {
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
         setCost(COST);

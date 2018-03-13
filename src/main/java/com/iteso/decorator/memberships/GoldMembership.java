@@ -1,5 +1,6 @@
 package com.iteso.decorator.memberships;
 
+import com.iteso.decorator.Benefits;
 import com.iteso.decorator.Membership;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by rvillalobos on 4/14/16.
  */
-public class GoldMembership extends Membership {
+public class GoldMembership extends Benefits {
 
 
     public static final int DOWNLOAD_CAPACITY = 1000;
@@ -20,7 +21,8 @@ public class GoldMembership extends Membership {
     public static final String GOLD = "Gold";
     public static final boolean UNLIMITED_DEVICES = false;
 
-    public GoldMembership() {
+    public GoldMembership(Membership membership) {
+        super(membership);
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
         setCost(COST);
