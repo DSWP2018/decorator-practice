@@ -10,87 +10,65 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
-    private String description = "Any Membership";
-private int cloudStorage = 0;
-private int simultaneousLogins = 0;
-private boolean unlimitedDevices = false;
-private int allowedDevices = 0;
-private double cost = 0;
-private int downloadCapacity = 0;
-private boolean support = false;
-private String supportCoverage = null;
+    /**
+     * Descripción.
+     */
+    private String description = "This is a Membership";
+    /**
+     * Costo.
+     */
+    private double cost = 0;
+    /**
+     * Lista de los beneficios.
+     */
+    private ArrayList benefits = new ArrayList();
 
-
-    public String getDescription(){
-        return description;
-    }
-    public abstract ArrayList getAllBenefits();
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getCloudStorage() {
-        return cloudStorage;
+    /**
+     * Fija descripción.
+     * @param desc descipcio´n externa.
+     */
+    public final void setDescription(final String desc) {
+        this.description = desc;
     }
 
-    public void setCloudStorage(int cloudStorage) {
-        this.cloudStorage = cloudStorage;
+    /**
+     * devuelve descripción.
+     * @return desc.
+     */
+    public final String getDescription() {
+        return this.description;
     }
 
-    public int getSimultaneousLogins() {
-        return simultaneousLogins;
+    /**
+     * setter de costo.
+     * @param costs costo.
+     */
+    public final void setCost(final double costs) {
+        this.cost = costs;
     }
 
-    public void setSimultaneousLogins(int simultaneousLogins) {
-        this.simultaneousLogins = simultaneousLogins;
+    /**
+     * getter de costo.
+     * @return costo.
+     */
+    public final double getCost() {
+        return this.cost;
     }
 
-    public boolean isUnlimitedDevices() {
-        return unlimitedDevices;
+    /**
+     * getter de los beneficios.
+     * @return beneficios.
+     */
+    public final ArrayList getAllBenefits() {
+        return this.benefits;
     }
 
-    public void setUnlimitedDevices(boolean unlimitedDevices) {
-        this.unlimitedDevices = unlimitedDevices;
+    /**
+     * agregar un beneficio a la lista.
+     * @param benefit puede ser cualquiera de los decoradores.
+     */
+    public final void setBenefits(final String benefit) {
+        this.benefits.add(benefit);
     }
 
-    public int getAllowedDevices() {
-        return allowedDevices;
-    }
-
-    public void setAllowedDevices(int allowedDevices) {
-        this.allowedDevices = allowedDevices;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public int getDownloadCapacity() {
-        return downloadCapacity;
-    }
-
-    public void setDownloadCapacity(int downloadCapacity) {
-        this.downloadCapacity = downloadCapacity;
-    }
-
-    public boolean isSupport() {
-        return support;
-    }
-
-    public void setSupport(boolean support) {
-        this.support = support;
-    }
-
-    public String getSupportCoverage() {
-        return supportCoverage;
-    }
-
-    public void setSupportCoverage(String supportCoverage) {
-        this.supportCoverage = supportCoverage;
-    }
 }

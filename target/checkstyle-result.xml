@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="C:\Users\manci\Desktop\DisSw\decorator-practice\src\main\java\com\iteso\decorator\MembershipBenefits\CloudStorage.java">
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\decorator-practice\src\main\java\com\iteso\decorator\MembershipBenefits\DownloadCapacity.java">
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\decorator-practice\src\main\java\com\iteso\decorator\MembershipBenefits\SimultaneousLogins.java">
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\decorator-practice\src\main\java\com\iteso\decorator\MembershipBenefits\Support.java">
+</file>
+</checkstyle>
