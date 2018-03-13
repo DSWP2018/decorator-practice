@@ -18,8 +18,9 @@ public class UltimateMembership extends Benefits {
      */
     public UltimateMembership(Membership membership){
         this.membership = membership;
-        this.membership.setDescription(getBenefitDescription());
-        this.membership.setBenefits(ULTIMATE_MEMBERSHIP_NAME);
+        setDescription(getBenefitDescription());
+        this.membership.setDescription(getDescription());
+        setBenefits(ULTIMATE_MEMBERSHIP_NAME);
         this.membership = new CloudStorage(this);
         this.membership = new Support(this);
         this.membership = new UnlimitedDevices(this);
