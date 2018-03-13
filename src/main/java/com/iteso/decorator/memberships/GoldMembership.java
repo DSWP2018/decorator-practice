@@ -1,38 +1,34 @@
 package com.iteso.decorator.memberships;
 
+import com.iteso.decorator.Allow_devices;
+import com.iteso.decorator.Cloud_storage;
+import com.iteso.decorator.Dowload_Capacity;
 import com.iteso.decorator.Membership;
-
-import java.util.ArrayList;
+import com.iteso.decorator.Simultaneous_logins;
+import com.iteso.decorator.Support;
+import com.iteso.decorator.Support_coverage;
+import com.iteso.decorator.Unlimited_devices;
 
 /**
  * Created by rvillalobos on 4/14/16.
  */
 public class GoldMembership extends Membership {
-
-
-    public static final int DOWNLOAD_CAPACITY = 1000;
-    public static final int COST = 599;
-    public static final int CLOUD_STORAGE = 500;
-    public static final int ALLOWED_DEVICES = 10;
-    public static final String GOLD_MEMBERSHIP = "Gold Membership";
-    public static final int SIMULTANEOUS_LOGINS = 3;
-    public static final boolean SUPPORT = true;
-    public static final String GOLD = "Gold";
-    public static final boolean UNLIMITED_DEVICES = false;
-
-    public GoldMembership() {
-        setAllowedDevices(ALLOWED_DEVICES);
-        setCloudStorage(CLOUD_STORAGE);
-        setCost(COST);
-        setDescription(GOLD_MEMBERSHIP);
-        setDownloadCapacity(DOWNLOAD_CAPACITY);
-        setSimultaneousLogins(SIMULTANEOUS_LOGINS);
-        setSupport(SUPPORT);
-        setSupportCoverage(GOLD);
-        setUnlimitedDevices(UNLIMITED_DEVICES);
-    }
-
-    public ArrayList getAllBenefits() {
-        return null;
-    }
+Membership membership = new BaseMembership();
+/***VAR**//*
+public static final String GOLD_MEMBERSHIP = "Gold Membership";*/
+/***Constructor**/
+public GoldMembership() {
+membership=new Allow_devices(6);
+membership=new Cloud_storage(5);
+membership=new Dowload_Capacity(4);
+membership=new Simultaneous_logins(3);
+membership=new Support_coverage("Gold");
+membership=new Support(true);
+membership=new Unlimited_devices(true);       
+}
+/***@return double**/
+@Override
+public double getCost() {
+return membership.getCost();
+}
 }

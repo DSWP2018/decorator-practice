@@ -1,6 +1,13 @@
 package com.iteso.decorator.memberships;
 
+import com.iteso.decorator.Allow_devices;
+import com.iteso.decorator.Cloud_storage;
+import com.iteso.decorator.Dowload_Capacity;
 import com.iteso.decorator.Membership;
+import com.iteso.decorator.Simultaneous_logins;
+import com.iteso.decorator.Support;
+import com.iteso.decorator.Support_coverage;
+import com.iteso.decorator.Unlimited_devices;
 
 import java.util.ArrayList;
 
@@ -8,31 +15,22 @@ import java.util.ArrayList;
  * Created by rvillalobos on 4/14/16.
  */
 public class FreeMembership extends Membership {
-
-
-    public static final int DOWNLOAD_CAPACITY = 150;
-    public static final int COST = 0;
-    public static final int CLOUD_STORAGE = 50;
-    public static final int ALLOWED_DEVICES = 1;
-    public static final String GOLD_MEMBERSHIP = "Free Membership";
-    public static final int SIMULTANEOUS_LOGINS = 1;
-    public static final boolean SUPPORT = false;
-    public static final String FREE = "Free";
-    public static final boolean UNLIMITED_DEVICES = false;
-
-    public FreeMembership() {
-        setAllowedDevices(ALLOWED_DEVICES);
-        setCloudStorage(CLOUD_STORAGE);
-        setCost(COST);
-        setDescription(GOLD_MEMBERSHIP);
-        setDownloadCapacity(DOWNLOAD_CAPACITY);
-        setSimultaneousLogins(SIMULTANEOUS_LOGINS);
-        setSupport(SUPPORT);
-        setSupportCoverage(FREE);
-        setUnlimitedDevices(UNLIMITED_DEVICES);
-    }
-
-    public ArrayList getAllBenefits() {
-        return null;
-    }
+Membership membership = new BaseMembership();
+/***VAR**//*
+public static final String GOLD_MEMBERSHIP = "Ultimate Membership";*/
+/***Constructor**/
+public FreeMembership() {
+membership=new Allow_devices(6);
+membership=new Cloud_storage(5);
+membership=new Dowload_Capacity(4);
+membership=new Simultaneous_logins(3);
+membership=new Support_coverage("Unlimite");
+membership=new Support(true);
+membership=new Unlimited_devices(true);  
+}
+/***@return double**/
+@Override
+public double getCost() {
+return membership.getCost();
+}
 }
