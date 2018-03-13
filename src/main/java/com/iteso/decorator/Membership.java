@@ -11,20 +11,20 @@ import java.util.ArrayList;
  */
 public abstract class Membership {
     private String description = "Any Membership";
-private int cloudStorage = 0;
-private int simultaneousLogins = 0;
-private boolean unlimitedDevices = false;
-private int allowedDevices = 0;
-private double cost = 0;
-private int downloadCapacity = 0;
-private boolean support = false;
-private String supportCoverage = null;
+    private int cloudStorage = 0;
+    private int simultaneousLogins = 0;
+    private boolean unlimitedDevices = false;
+    private int allowedDevices = 0;
+    private double cost = 0;
+    private int downloadCapacity = 0;
+    private boolean support = false;
+    private String supportCoverage = null;
 
 
     public String getDescription(){
         return description;
     }
-    public abstract ArrayList getAllBenefits();
+    //public abstract ArrayList getAllBenefits();
 
     public void setDescription(String description) {
         this.description = description;
