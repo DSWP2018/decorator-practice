@@ -23,7 +23,9 @@ public class GoldMembership extends Membership {
         public int COST(){ return 599;}
         public int CLOUD_STORAGE(){ return 500; }
         public int ALLOWED_DEVICES(){return 10; }
-        public int 
+        public int SIMULTANEOUS_LOGINS(){return 3; }
+        public boolean SUPPORT(){return true;}
+        public boolean UNLIMITED_DEVICES() {return false;}
 
         /*setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);

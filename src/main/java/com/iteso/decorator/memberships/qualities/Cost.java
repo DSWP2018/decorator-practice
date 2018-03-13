@@ -1,16 +1,19 @@
 package com.iteso.decorator.memberships.qualities;
 
-public class Cost extends MembershipDecorator{
-    User user;
+import com.iteso.decorator.memberships.memberships.Membership;
+import com.iteso.decorator.memberships.memberships.MembershipDecorator;
 
-    public Envio (User user){
-        this.user = user;
+public class Cost extends MembershipDecorator{
+    Membership member;
+
+    public Cost (Membership member){
+        this.member = member;
     }
 
     public String getDescription() {
-        return user.getDescription() + " Cargo de envio";
+        return "Costo Membrecía" + member.getDescription();
     }
 
-    public double price() {return user.price() + 100;
+    public double price() {return member.getCost();
     }
 }

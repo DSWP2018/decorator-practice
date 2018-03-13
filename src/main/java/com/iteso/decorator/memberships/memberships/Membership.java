@@ -22,9 +22,7 @@ private boolean support = false;
 private String supportCoverage = null;
 
 
-    public String getDescription(){
-        return description;
-    }
+    public String getDescription(){return description; }
     /*public abstract ArrayList getAllBenefits();*/
 
     public void setDescription(String description) {
