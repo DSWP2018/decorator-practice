@@ -10,87 +10,117 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
+
+    /** Membership description. */
     private String description = "Any Membership";
+    /** CloudStorage of membership. */
 private int cloudStorage = 0;
+/** Logins. */
 private int simultaneousLogins = 0;
+/** Unlimited devices of membership. */
 private boolean unlimitedDevices = false;
+/** AllowDevices of membership. */
 private int allowedDevices = 0;
+/** Cost of membership. */
 private double cost = 0;
+/** DownloadCapacity of membership. */
 private int downloadCapacity = 0;
+/** Support. */
 private boolean support = false;
+/** Support coverage of membership. */
 private String supportCoverage = null;
 
-
-    public String getDescription(){
+/** Get membership description.
+ *  @return description.*/
+    public final String getDescription() {
         return description;
     }
+/** Get all benefits.
+ * @return ArrayList. */
     public abstract ArrayList getAllBenefits();
-
-    public void setDescription(String description) {
-        this.description = description;
+/** Set membership description.
+ * @param description1 .*/
+    public final void setDescription(final String description1) {
+        this.description = description1;
     }
-
-    public int getCloudStorage() {
+/** Get membership cloud storage.
+ * @return cloudStorage . */
+    public final int getCloudStorage() {
         return cloudStorage;
     }
-
-    public void setCloudStorage(int cloudStorage) {
-        this.cloudStorage = cloudStorage;
+/** Set membership cloud storage.
+ * @param cloudStorage1 . */
+    public final void setCloudStorage(final int cloudStorage1) {
+        this.cloudStorage = cloudStorage1;
     }
-
-    public int getSimultaneousLogins() {
+/** Get membership simultaneous login.
+ * @return simultaneousLogins . */
+    public final int getSimultaneousLogins() {
         return simultaneousLogins;
     }
-
-    public void setSimultaneousLogins(int simultaneousLogins) {
-        this.simultaneousLogins = simultaneousLogins;
+/** Set simultaneous logins.
+ * @param simultaneousLogins1 . */
+    public final void setSimultaneousLogins(final int simultaneousLogins1) {
+        this.simultaneousLogins = simultaneousLogins1;
     }
-
-    public boolean isUnlimitedDevices() {
+/** Is unlimited devices.
+ * @return uniitedDevices . */
+    public final boolean isUnlimitedDevices() {
         return unlimitedDevices;
     }
-
-    public void setUnlimitedDevices(boolean unlimitedDevices) {
-        this.unlimitedDevices = unlimitedDevices;
+/** Set unlimited devices.
+ * @param unlimitedDevices1 . */
+    public final void setUnlimitedDevices(final boolean unlimitedDevices1) {
+        this.unlimitedDevices = unlimitedDevices1;
     }
-
-    public int getAllowedDevices() {
+/** Get allowed devices.
+ * @return allowedDevices . */
+    public final int getAllowedDevices() {
         return allowedDevices;
     }
-
-    public void setAllowedDevices(int allowedDevices) {
-        this.allowedDevices = allowedDevices;
+/** Set allowed devices.
+ * @param allowedDevices1 . */
+    public final void setAllowedDevices(final int allowedDevices1) {
+        this.allowedDevices = allowedDevices1;
     }
-
-    public double getCost() {
+/** Get cost of membership.
+ * @return cost . */
+    public final double getCost() {
         return cost;
     }
-
-    public void setCost(double cost) {
-        this.cost = cost;
+/** Set cost of membership.
+ * @param cost1 . */
+    public final void setCost(final double cost1) {
+        this.cost = cost1;
     }
-
-    public int getDownloadCapacity() {
+/** Get membership download capacity.
+ * @return downloadCapacity . */
+    public final int getDownloadCapacity() {
         return downloadCapacity;
     }
-
-    public void setDownloadCapacity(int downloadCapacity) {
-        this.downloadCapacity = downloadCapacity;
+/** Set membership download capacity.
+ * @param downloadCapacity1 . */
+    public final void setDownloadCapacity(final int downloadCapacity1) {
+        this.downloadCapacity = downloadCapacity1;
     }
-
-    public boolean isSupport() {
+/** Is support.
+ * @return support . */
+    public final boolean isSupport() {
         return support;
     }
-
-    public void setSupport(boolean support) {
-        this.support = support;
+/** Set support.
+ * @param support1 . */
+    public final void setSupport(final boolean support1) {
+        this.support = support1;
     }
-
-    public String getSupportCoverage() {
+/** Get support coverage.
+ * @return  supportCoverage . */
+    public final String getSupportCoverage() {
         return supportCoverage;
     }
-
-    public void setSupportCoverage(String supportCoverage) {
-        this.supportCoverage = supportCoverage;
+/** Set support coverage.
+ * @param supportCoverage1 . */
+    public final void setSupportCoverage(final String supportCoverage1) {
+        this.supportCoverage = supportCoverage1;
     }
 }

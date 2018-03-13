@@ -4,10 +4,8 @@ import com.iteso.decorator.Membership;
 
 import java.util.ArrayList;
 
-/**
- * Created by rvillalobos on 4/14/16.
- */
-public class FreeMembership extends Benefits {
+/** Base membership. */
+public class BaseMembership extends Membership {
 
     /** Download capacity. */
     public static final int DOWNLOAD_CAPACITY = 150;
@@ -28,11 +26,8 @@ public class FreeMembership extends Benefits {
     /** Unlimited devices. */
     public static final boolean UNLIMITED_DEVICES = false;
 
-
-    /** Constructor.
-     * @param m .*/
-    public FreeMembership(final Membership m) {
-        super(m);
+    /** Constructor. */
+    public BaseMembership() {
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
         setCost(COST);
@@ -49,4 +44,5 @@ public class FreeMembership extends Benefits {
     public final ArrayList getAllBenefits() {
         return null;
     }
+
 }
