@@ -10,7 +10,7 @@ public class BaseMembership extends Membership {
     private final double baseMembershipCost = 0; /** Cost. */
 
 
-    public BaseMembership(){
+    public BaseMembership() {
         //this.setDescription(BASE_MEMBERSHIP_NAME);
         this.setCost(baseMembershipCost);
     }

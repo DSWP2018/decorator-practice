@@ -1,7 +1,5 @@
 package com.iteso.decorator;
 
-import org.apache.commons.collections.iterators.ArrayListIterator;
-
 import java.util.ArrayList;
 
 /**
@@ -12,15 +10,17 @@ import java.util.ArrayList;
 public abstract class Membership {
 
     /**Attributes of the basic Membership. */
-    private String description = "Membership"; /**Description of the membership. */
+    private String description = "Membership"; /**Description
+     of the membership. */
     private double cost = 0; /**Actual cost of the membership. */
-    private ArrayList benefits = new ArrayList(); /**List of all the benefits. */
+    private ArrayList benefits = new ArrayList(); /**List of all
+     the benefits. */
 
     /**Method getDescription. /*
      *
      * @return a String with all the description.
      */
-    public String getDescription(){
+    public final String getDescription() {
         return description;
     }
 
@@ -28,7 +28,7 @@ public abstract class Membership {
      *
      * @param newFeature string with the new feature.
      */
-    public void setDescription(String newFeature){
+    public final void setDescription(final String newFeature) {
         this.description += " " + newFeature;
     }
 
@@ -36,15 +36,15 @@ public abstract class Membership {
      *
      * @return an ArrayList with all the benefits.
      */
-    public ArrayList getAllBenefits(){
+    public final ArrayList getAllBenefits() {
         return this.benefits;
     }
 
     /**Method setBenefit. /*
      *
-     * @param benefit
+     * @param benefit name of the new benefit.
      */
-    public void setBenefits(String benefit){
+    public final void setBenefits(final String benefit) {
         benefits.add(benefit);
     }
 
@@ -52,15 +52,15 @@ public abstract class Membership {
      *
      * @return get a double that represent the cost.
      */
-    public double getCost() {
+    public final double getCost() {
         return cost;
     }
 
     /**Method setCost. /*
-     *
+     * @param newCost add to the actual cost.
      */
-    public void setCost(double cost){
-        this.cost += cost;
+    public final void setCost(final double newCost) {
+        this.cost += newCost;
     }
 
 
