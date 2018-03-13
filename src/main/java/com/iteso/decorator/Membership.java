@@ -6,14 +6,15 @@ package com.iteso.decorator;
  */
 public abstract class Membership {
 /***var.**/
-protected String description;
-public void setDescription() {
-	this.description = "Any Membership";
-}
-/***@return description.**/
-public final String getDescription() {
-return description;
+private static String description;
+/**@param a String***/
+public final void setDescription(final String a) {
+description = a;
 }
 /***@return double.**/
 public abstract double getCost();
+/***@return String.**/
+public final String getDescription() {
+return description;
+}
 }

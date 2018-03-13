@@ -7,18 +7,18 @@ public class SupportCoverage extends BenefitsDecorator {
 public static final double COST = .5;
 /***VATR.**/
 private static String coverage;
-/***@param cove.**/
+/***@param cove String.**/
 public SupportCoverage(final String cove) {
-coverage=cove;
+coverage = cove;
 }
 /***Membership.**/
-Membership m;
+private Membership m;
 /***@return String.**/
-public String getDescription() {
+public final String getDescription() {
 return m.getDescription() + " " + coverage;
 }
 /***@return double.**/
-public double getCost() {
+public final double getCost() {
 return  COST + m.getCost();
 }
 }

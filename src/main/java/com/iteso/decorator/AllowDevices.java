@@ -6,7 +6,7 @@ public class  AllowDevices extends BenefitsDecorator {
 public static final double COST = .5;
 /***VATR.**/
 private static double amount;
-/***@param ramount.**/
+/***@param ramount int.**/
 public AllowDevices(final int ramount) {
 amount = ramount;
 }

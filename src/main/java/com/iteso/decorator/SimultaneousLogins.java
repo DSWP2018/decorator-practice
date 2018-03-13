@@ -4,15 +4,15 @@ import com.iteso.decorator.memberships.BenefitsDecorator;
 /***CLASS.**/
 public class SimultaneousLogins extends BenefitsDecorator {
 /***VAT=R.**/
-public static final double COST =.5;
+public static final double COST = .5;
 /***VATR.**/
 private static double amount;
 /***VAR.**/
-public static final String DES =" with simultaneous logins";
+public static final String DES = " with simultaneous logins";
 /***Membership.**/
-Membership m;
-/***Constructor.**/
-public SimultaneousLogins (final double am){
+private Membership m;
+/**@param am double.**/
+public SimultaneousLogins(final double am) {
 amount = am;
 }
 /***@return String.**/

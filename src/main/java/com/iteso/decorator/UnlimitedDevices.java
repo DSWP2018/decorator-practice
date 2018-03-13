@@ -1,23 +1,24 @@
 package com.iteso.decorator;
 
 import com.iteso.decorator.memberships.BenefitsDecorator;
+
 /***CLASS.**/
-public class  Support extends BenefitsDecorator {
+public class  UnlimitedDevices extends BenefitsDecorator {
 /***VAT=R.**/
 public static final double COST = .5;
 /***VATR.**/
-private boolean hasSupport;
-/***@param support boolean.**/
-public Support(final boolean support) {
-hasSupport = support;
+private static boolean hasUnlimited;
+/***@param unli boolean.**/
+public UnlimitedDevices(final boolean unli) {
+hasUnlimited = unli;
 }
 /***VAR.**/
-public static final String DES = " with support";
+public static final String DES = " with simultaneous logins";
 /***Membership.**/
 private Membership m;
 /***@return String.**/
 public final String getDescription() {
-if (hasSupport) {
+if (hasUnlimited) {
 return m.getDescription() + DES;
 } else {
 return m.getDescription();
@@ -25,7 +26,7 @@ return m.getDescription();
 }
 /***@return double.**/
 public final double getCost() {
-if (hasSupport) {
+if (hasUnlimited) {
 return  COST + m.getCost();
 } else {
 return m.getCost();

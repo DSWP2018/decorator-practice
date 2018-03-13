@@ -6,12 +6,12 @@ public class  DowloadCapacity extends BenefitsDecorator {
 public static final double COST = .5;
 /***VATR.**/
 private static double amount;
-/***@param ramount.**/
+/***@param ramount int.**/
 public DowloadCapacity(final int ramount) {
 amount = ramount;
 }
 /***VAR.**/
-public static final String DES =" with";
+public static final String DES = " with";
 /***Membership.**/
 private Membership m;
 /***@return String.**/

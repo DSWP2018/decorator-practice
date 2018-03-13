@@ -1,21 +1,20 @@
 package com.iteso.decorator.memberships;
 
-import java.util.ArrayList;
 
 import com.iteso.decorator.Membership;
-
-public class BaseMembership extends Membership{
-/***var**/
-public static final double cost=8;
-/***var**/
-public static final String descriptionBM="Membership";	
-/***constructor**/
-public BaseMembership(){
-description = descriptionBM;
+/*****/
+public class BaseMembership extends Membership {
+/***var.**/
+public static final double COST = 8;
+/***var.**/
+public static final String DESCRIPTIONBM = "Membership";
+/***constructor.**/
+public BaseMembership() {
+setDescription(DESCRIPTIONBM);
 }
-/***@return double**/
+/***@return double.**/
 @Override
-public double getCost() {
-return cost;  
-}	
+public final double getCost() {
+return COST;
+}
 }
