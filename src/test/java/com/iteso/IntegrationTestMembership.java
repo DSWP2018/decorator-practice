@@ -1,14 +1,25 @@
-package com.iteso.decorator;
+package test.java.com.iteso;
 
+import com.iteso.decorator.Membership;
 import com.iteso.decorator.memberships.BaseMembership;
 import com.iteso.decorator.memberships.GoldMembership;
 import com.iteso.decorator.memberships.UltimateMembership;
+import org.junit.Before;
+import org.junit.Test;
 
-import java.lang.reflect.Member;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
 
-public class Main {
-    public static void main(String []args) {
-        Membership membresia = new BaseMembership();
+public class IntegrationTestMembership {
+    Membership membresia;
+
+    @Before
+    public void setUp() {
+        membresia = new BaseMembership();
+    }
+
+    @Test
+    public void testCompleto() {
         System.out.println(membresia.getAllBenefits());
 
         membresia = new GoldMembership(membresia);

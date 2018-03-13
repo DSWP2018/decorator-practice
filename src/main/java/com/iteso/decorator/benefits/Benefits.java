@@ -2,12 +2,20 @@ package com.iteso.decorator.benefits;
 
 import com.iteso.decorator.Membership;
 
-import java.util.ArrayList;
-
+/**
+ * Pues sí que falta el comentario.
+ */
 public abstract class Benefits extends Membership {
-    protected Membership membership;
+    /**
+     * Que me aspen.
+     */
+    private Membership membership;
 
-    public Benefits( final Membership mem ) {
+    /**
+     * It makes you upset.
+     * @param mem you (you).
+     */
+    public Benefits(final Membership mem) {
         membership = mem;
     }
 }

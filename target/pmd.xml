@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.0.1" timestamp="2018-03-13T05:44:45.094">
+<file name="C:\Users\Juan\Documents\eclipse\decorator-example\decorator-practice\src\main\java\com\iteso\decorator\benefits\Benefits.java">
+<violation beginline="12" endline="12" begincolumn="24" endcolumn="33" rule="UnusedPrivateField" ruleset="Best Practices" package="com.iteso.decorator.benefits" class="Benefits" variable="membership" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'membership'.
+</violation>
+</file>
+</pmd>

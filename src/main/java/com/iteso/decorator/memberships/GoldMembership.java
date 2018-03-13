@@ -9,19 +9,48 @@ import java.util.ArrayList;
  * Created by rvillalobos on 4/14/16.
  */
 public class GoldMembership extends Benefits {
+    /**
+     * I really don't know.
+     */
     public static final int DOWNLOAD_CAPACITY = 1000;
-public static final int COST = 599;
-public static final int CLOUD_STORAGE = 500;
-public static final int ALLOWED_DEVICES = 10;
-public static final String GOLD_MEMBERSHIP = "Gold Membership";
-public static final int SIMULTANEOUS_LOGINS = 3;
-public static final boolean SUPPORT = true;
-public static final String GOLD = "Gold";
-public static final boolean UNLIMITED_DEVICES = false;
+    /**
+     * What I'd be doing instead of this.
+     */
+    public static final int COST = 599;
+    /**
+     * Isn't that insane?.
+     */
+    public static final int CLOUD_STORAGE = 500;
+    /**
+     * Whatever, did you see the new.
+     */
+    public static final int ALLOWED_DEVICES = 10;
+    /**
+     * Blade Runner movie?.
+     */
+    public static final String GOLD_MEMBERSHIP = "Gold Membership";
+    /**
+     * Do you want me to transcript some dialogues?.
+     */
+    public static final int SIMULTANEOUS_LOGINS = 3;
+    /**
+     * I'd write the laughing-crying emoji.
+     */
+    public static final boolean SUPPORT = true;
+    /**
+     * But there's none.
+     */
+    public static final String GOLD = "Gold";
+    /**
+     * Just like our hearts.
+     */
+    public static final boolean UNLIMITED_DEVICES = false;
 
-    private Membership membership;
-
-    public GoldMembership( final Membership mem ) {
+    /**
+     * "With lots of cells".
+     * @param mem is us.
+     */
+    public GoldMembership(final Membership mem) {
         super(mem);
         setAllowedDevices(ALLOWED_DEVICES);
         setCloudStorage(CLOUD_STORAGE);
@@ -35,13 +64,18 @@ public static final boolean UNLIMITED_DEVICES = false;
         setDescription("Membresía gold");
     }
 
-    @Override public ArrayList<String> getAllBenefits() {
-        allBenefits.add("Allowed devices: "+getAllowedDevices());
-        allBenefits.add("Cloud storage: "+getAllowedDevices());
-        allBenefits.add("Download capacity: "+getDownloadCapacity());
-        allBenefits.add("Simultaneous logins: "+getSimultaneousLogins());
-        allBenefits.add("Support: "+getSupportCoverage());
-        allBenefits.add("Unlimited devices: "+isUnlimitedDevices());
+    /**
+     * Interlinked.
+     * @return (Interlinked).
+     */
+    @Override
+    public final ArrayList<String> getAllBenefits() {
+        allBenefits.add("Allowed devices: " + getAllowedDevices());
+        allBenefits.add("Cloud storage: " + getAllowedDevices());
+        allBenefits.add("Download capacity: " + getDownloadCapacity());
+        allBenefits.add("Simultaneous logins: " + getSimultaneousLogins());
+        allBenefits.add("Support: " + getSupportCoverage());
+        allBenefits.add("Unlimited devices: " + isUnlimitedDevices());
 
         return allBenefits;
     }

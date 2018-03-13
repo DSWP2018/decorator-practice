@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="C:\Users\Juan\Documents\eclipse\decorator-example\decorator-practice\src\main\java\com\iteso\decorator\benefits\Benefits.java">
+</file>
+<file name="C:\Users\Juan\Documents\eclipse\decorator-example\decorator-practice\src\main\java\com\iteso\decorator\Membership.java">
+<error line="52" column="33" severity="error" message="La variable &apos;allBenefits&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="88" column="49" severity="error" message="Se esperaba la etiqueta @param para &apos;cloudStorageU&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+</checkstyle>
