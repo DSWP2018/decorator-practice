@@ -3,37 +3,44 @@ package com.iteso.decorator.memberships;
 import com.iteso.decorator.Benefits;
 import com.iteso.decorator.Membership;
 
-import java.util.ArrayList;
-
 /**
  * Created by rvillalobos on 4/14/16.
  */
 public class GoldMembership extends Benefits {
 
+    /**variables. */
+    public static final Integer
+            DOWNLOAD_CAPACITY = 1000; /**Capacidad de descarga. */
+    public static final Integer
+            COST = 599; /**Costo. */
+    public static final Integer
+            CLOUD_STORAGE = 500; /**Storage nube. */
+    public static final Integer
+            ALLOWED_DEVICES = 10; /**Dispositivos permitidos. */
+    //public static final String GOLD_MEMBERSHIP = "Gold Membership"; /***/
+    public static final Integer
+            SIMULTANEOUS_LOGINS = 3; /**Logins. */
+    public static final Boolean
+            SUPPORT = true; /**Soporte. */
+   // public static final String GOLD = "Gold";
+    public static final boolean
+            UNLIMITED_DEVICES = false; /**Inlimitados servicios. */
 
-    public static final Integer DOWNLOAD_CAPACITY = 1000;
-    public static final Integer COST = 599;
-    public static final Integer CLOUD_STORAGE = 500;
-    public static final Integer ALLOWED_DEVICES = 10;
-    public static final String GOLD_MEMBERSHIP = "Gold Membership";
-    public static final Integer SIMULTANEOUS_LOGINS = 3;
-    public static final Boolean SUPPORT = true;
-    public static final String GOLD = "Gold";
-    public static final boolean UNLIMITED_DEVICES = false;
-
-    public GoldMembership(Membership membersh) {
+    /**Constructor.
+     * @param membersh */
+    public GoldMembership(final Membership membersh) {
         setMembership(membersh);
         setBenefits();
         membersh.setCost(this.COST);
         membersh.setDescription(getDescription());
     }
 
-    public ArrayList getAllBenefits() {
+   /* public ArrayList getAllBenefits() {
         return getMembership().getAllBenefits();
     }
-
+*/  /**Setbenefits. */
     @Override
-    public void setBenefits() {
+    public final void setBenefits() {
         getMembership().getAllBenefits().add(DOWNLOAD_CAPACITY);
         getMembership().getAllBenefits().add(CLOUD_STORAGE);
         getMembership().getAllBenefits().add(ALLOWED_DEVICES);
@@ -41,14 +48,14 @@ public class GoldMembership extends Benefits {
         getMembership().getAllBenefits().add(SUPPORT);
         getMembership().getAllBenefits().add(UNLIMITED_DEVICES);
     }
-
+    /**@return string. */
     @Override
-    public String getDescription() {
+    public final String getDescription() {
         return "Gold";
     }
 
     @Override
-    public int getCost() {
+    public final int getCost() {
         return this.COST;
     }
 }

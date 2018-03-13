@@ -9,28 +9,29 @@ import java.util.ArrayList;
  * Time: 12:41 PM
  * To change this template use File | Settings | File Templates.
  */
+/**Membership. */
 public abstract class Membership {
-    private static ArrayList ADDBENEFITS = new ArrayList<Object>();
-    private String description = "";
-    private int cost = 5;
+    /**Variables. */
+    private static ArrayList addBenefits
+            = new ArrayList<Object>(); /**Array list benefits. */
+    private String description = ""; /**Descriptoin. */
+    private static final int CONSCOST = 5; /**constante cost. */
+    private int cost = CONSCOST; /**Cost default. */
 
-
-    public ArrayList getAllBenefits() {
-        return this.ADDBENEFITS;
+    /**@return arraylist. */
+    public final ArrayList getAllBenefits() {
+        return this.addBenefits;
     }
-
-    public void setDescription(String des){
+    /**@param des */
+    public final void setDescription(final String des) {
         this.description = des;
     }
-
-    public String getDescription(){
-        return this.description;
-    }
-
-    public void setCost(int co){
+    /**@return string */
+    public abstract String getDescription();
+    /**@param co */
+    public final void setCost(final int co) {
         this.cost += co;
     }
-
+    /**abstract setbenefits. */
     public abstract void setBenefits();
-
 }

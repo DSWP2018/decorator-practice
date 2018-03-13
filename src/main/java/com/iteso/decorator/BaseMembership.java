@@ -1,18 +1,25 @@
 package com.iteso.decorator;
 
-import com.iteso.decorator.Membership;
-
+/**Clase abstracta. */
 public class BaseMembership extends Membership {
-    private static Integer OP = 1;
+    /**Declarar variables. */
+    private static final Integer Z_O = 1;
 
-    public BaseMembership(){
+    /**Constructor. */
+    public BaseMembership() {
         setBenefits();
         //System.out.print("hi");
     }
 
     @Override
-    public void setBenefits() {
-        getAllBenefits().add(OP);
+    public final String getDescription() {
+        return "";
+    }
+
+    @Override
+    /**Setear. */
+    public final void setBenefits() {
+        getAllBenefits().add(Z_O);
     }
 
 
