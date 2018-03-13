@@ -20,12 +20,15 @@ public class Download extends BenefitsDecorator{
     }
 
     @Override
-    public String getDescription(String description){
+    public String getDescription(){
+        if(member.getDescription().equals("Basic Membership")){
+            member.setDescription("Custom Membership");
+        }
         return member.getDescription() + "\nDownload capacity: " + member.getDownloadCapacity();
     }
 
     @Override
-    public double getCost(double cost){
+    public double getCost(){
         return (member.getCost() + (0.1 * member.getDownloadCapacity()));
     }
 

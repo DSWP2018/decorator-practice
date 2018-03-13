@@ -19,12 +19,15 @@ public class Cloud extends BenefitsDecorator{
     }
 
     @Override
-    public String getDescription(String description){
+    public String getDescription(){
+        if(member.getDescription().equals("Basic Membership")){
+            member.setDescription("Custom Membership");
+        }
         return member.getDescription() + "\nExtra cloud: " + member.getCloudStorage();
     }
 
     @Override
-    public double getCost(double cost){
+    public double getCost(){
         return (member.getCost() + (5 * member.getCloudStorage()));
     }
 

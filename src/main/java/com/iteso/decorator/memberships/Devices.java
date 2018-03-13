@@ -31,27 +31,30 @@ public class Devices extends BenefitsDecorator {
     }
 
     @Override
-    public String getDescription(String description){
+    public String getDescription(){
+        if(member.getDescription().equals("Basic Membership")){
+            member.setDescription("Custom Membership");
+        }
         return member.getDescription() +
-                "\nSimultaneous Logins: " + member.getSimultaneousLogins() +
-                "\nAllowed Devices: " + member.getAllowedDevices() +
-                "\nUnlimited: " + member.isUnlimitedDevices();
+                "\nSimultaneous Logins: " + getSimultaneousLogins() +
+                "\nAllowed Devices: " + getAllowedDevices() +
+                "\nUnlimited: " + isUnlimitedDevices();
     }
 
     @Override
-    public double getCost(double cost){
+    public double getCost(){
         return (member.getCost() + (1 * member.getSimultaneousLogins()) +
                 (member.isUnlimitedDevices() ? 50 : (1 * member.getAllowedDevices())));
     }
 
     @Override
     public int getAllowedDevices(){
-        return member.getAllowedDevices();
+        return member.isUnlimitedDevices() ? 9999 : member.getAllowedDevices();
     }
 
     @Override
     public int getSimultaneousLogins(){
-        return member.getSimultaneousLogins();
+        return member.isUnlimitedDevices() ? 9999 : member.getSimultaneousLogins();
     }
 
     @Override
