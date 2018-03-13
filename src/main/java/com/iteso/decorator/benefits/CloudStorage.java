@@ -2,36 +2,37 @@ package com.iteso.decorator.benefits;
 
 import com.iteso.decorator.Membership;
 
-import java.util.ArrayList;
-
+/**Class CloudStorage. /*
+ *
+ */
 public class CloudStorage extends Benefits {
 
     /**Information of the benefit. */
-    private final String CLOUD_STORAGE_NAME = "Cloud Storage"; /**Name. */
-    private final double CLOUD_STORAGE_COST = 150.00; /** Cost. */
+    private final String cloudStorageName = "Cloud Storage"; /**Name. */
+    private final double cloudStorageCost = 150.00; /** Cost. */
 
-    private int storage = 1000;
+    private final int storage = 1000;
 
 
     /**Constructor CloudStorage. /*
      *
-     * @param membership
+     * @param membership victim of decoration object.
      */
-    public CloudStorage(Membership membership){
+    public CloudStorage(final Membership membership) {
         setAllBenefits(membership.getAllBenefits());
         setNewDescription(membership.getDescription());
         setCost(membership.getCost());
 
-        setCost(CLOUD_STORAGE_COST);
+        setCost(cloudStorageCost);
         setDescription(getBenefitDescription());
-        setBenefits(CLOUD_STORAGE_NAME);
+        setBenefits(cloudStorageName);
     }
 
     /**Method getBenefitDescription. /*
      *
      * @return get the description of this benefit.
      */
-    public String getBenefitDescription(){
-        return "+ " + CLOUD_STORAGE_NAME + " = " + storage + " GB";
+    public final String getBenefitDescription() {
+        return "+ " + cloudStorageName + " = " + storage + " GB";
     }
 }

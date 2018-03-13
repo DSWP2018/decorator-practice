@@ -8,32 +8,34 @@ import com.iteso.decorator.Membership;
 public class DownloadCapacity extends Benefits {
 
     /**Information of the benefit. */
-    private final String DOWNLOAD_CAPACITY_NAME = "Download Capacity"; /**Name. */
-    private final double DOWNLOAD_CAPACITY_COST = 170.00; /** Cost. */
 
-    private int capacity = 32;
+    private final String downloadCapacityName = "Download Capacity"; /**
+     /**Name. */
+    private final double downloadCapacityCost = 170.00; /** Cost. */
+
+    private final int capacity = 32;
 
 
     /**Constructor DownloadCapacity. /*
      *
-     * @param membership
+     * @param membership victim of decoration object.
      */
-    public DownloadCapacity(Membership membership){
+    public DownloadCapacity(final Membership membership) {
         setAllBenefits(membership.getAllBenefits());
         setNewDescription(membership.getDescription());
         setCost(membership.getCost());
 
-        setCost(DOWNLOAD_CAPACITY_COST);
+        setCost(downloadCapacityCost);
         setDescription(getBenefitDescription());
-        setBenefits(DOWNLOAD_CAPACITY_NAME);
+        setBenefits(downloadCapacityName);
     }
 
     /**Method getBenefitDescription. /*
      *
      * @return get the description of this benefit.
      */
-    public String getBenefitDescription(){
-        return "+ " + DOWNLOAD_CAPACITY_NAME + " = " + capacity;
+    public final String getBenefitDescription() {
+        return "+ " + downloadCapacityName + " = " + capacity;
     }
 
 }

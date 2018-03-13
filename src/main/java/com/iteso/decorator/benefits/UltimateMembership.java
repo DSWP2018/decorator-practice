@@ -10,13 +10,14 @@ public class UltimateMembership extends Benefits {
 
 
     /**Information of the benefit. */
-    private final String ULTIMATE_MEMBERSHIP_NAME = "Type: ULTIMATE"; /**Name. */
+    /**Name. */
+    private final String ultimateMembershipName = "Type: ULTIMATE";
 
     /**Constructor UltimateMemebership. /*
      *
-     * @param membership
+     * @param membership victim of decoration.
      */
-    public UltimateMembership(Membership membership){
+    public UltimateMembership(Membership membership) {
         membership = new CloudStorage(membership);
         membership = new Support(membership);
         membership = new UnlimitedDevices(membership);
@@ -27,14 +28,14 @@ public class UltimateMembership extends Benefits {
         setCost(membership.getCost());
 
         setDescription(getBenefitDescription());
-        setBenefits(ULTIMATE_MEMBERSHIP_NAME);
+        setBenefits(ultimateMembershipName);
     }
 
     /**Method getBenefitDescription. /*
      *
      * @return get the description of this benefit.
      */
-    public String getBenefitDescription(){
-        return "+ " + ULTIMATE_MEMBERSHIP_NAME;
+    public final String getBenefitDescription() {
+        return "+ " + ultimateMembershipName;
     }
 }

@@ -1,7 +1,6 @@
 package com.iteso.decorator.benefits;
 
 import com.iteso.decorator.Membership;
-import com.iteso.decorator.benefits.Benefits;
 
 
 /**
@@ -11,13 +10,13 @@ public class GoldMembership extends Benefits {
 
 
     /**Information of the benefit. */
-    private final String GOLD_MEMBERSHIP_NAME = "Type: GOLD"; /**Name. */
+    private final String goldMembershipName = "Type: GOLD"; /**Name. */
 
     /**Constructor GoldMembership. /*
      *
-     * @param membership
+     * @param membership victim of decoration object.
      */
-    public GoldMembership(Membership membership){
+    public GoldMembership(Membership membership) {
         membership = new CloudStorage(membership);
         membership = new Support(membership);
 
@@ -26,7 +25,7 @@ public class GoldMembership extends Benefits {
         setCost(membership.getCost());
 
         setDescription(getBenefitDescription());
-        setBenefits(GOLD_MEMBERSHIP_NAME);
+        setBenefits(goldMembershipName);
 
 
     }
@@ -35,7 +34,7 @@ public class GoldMembership extends Benefits {
      *
      * @return get the description of this benefit.
      */
-    public String getBenefitDescription(){
-        return "+ " + GOLD_MEMBERSHIP_NAME;
+    public final String getBenefitDescription() {
+        return "+ " + goldMembershipName;
     }
 }

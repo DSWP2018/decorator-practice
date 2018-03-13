@@ -2,34 +2,37 @@ package com.iteso.decorator.benefits;
 
 import com.iteso.decorator.Membership;
 
+/**Class Support. /*
+ *
+ */
 public class Support extends Benefits {
 
     /**Information of the benefit. */
-    private final String SUPPORT_NAME = "Support"; /**Name. */
-    private final double SUPPORT_COST = 100.00; /** Cost. */
+    private final String supportName = "Support"; /**Name. */
+    private final double supportCost = 100.00; /** Cost. */
 
 
 
     /**Constructor CloudStorage. /*
      *
-     * @param membership
+     * @param membership victim of decoration.
      */
-    public Support(Membership membership){
+    public Support(final Membership membership) {
         setAllBenefits(membership.getAllBenefits());
         setNewDescription(membership.getDescription());
         setCost(membership.getCost());
 
-        setCost(SUPPORT_COST);
+        setCost(supportCost);
         setDescription(getBenefitDescription());
-        setBenefits(SUPPORT_NAME);
+        setBenefits(supportName);
     }
 
     /**Method getBenefitDescription. /*
      *
      * @return get the description of this benefit.
      */
-    public String getBenefitDescription(){
-        return "+ " + SUPPORT_NAME;
+    public final String getBenefitDescription() {
+        return "+ " + supportName;
     }
 
 
