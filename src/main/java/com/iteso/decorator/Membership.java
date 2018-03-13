@@ -10,87 +10,190 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
+    /**
+     * Variable de membership.
+     */
     private String description = "Any Membership";
-private int cloudStorage = 0;
-private int simultaneousLogins = 0;
-private boolean unlimitedDevices = false;
-private int allowedDevices = 0;
-private double cost = 0;
-private int downloadCapacity = 0;
-private boolean support = false;
-private String supportCoverage = null;
+    /**
+     * Variable de membership.
+     */
+    private int cloudStorage = 0;
+    /**
+     * Variable de membership.
+     */
+    private int simultaneousLogins = 0;
+    /**
+     * Variable de membership.
+     */
+    private boolean unlimitedDevices = false;
+    /**
+     * Variable de membership.
+     */
+    private int allowedDevices = 0;
+    /**
+     * Variable de membership.
+     */
+    private double cost = 0;
+    /**
+     * Variable de membership.
+     */
+    private int downloadCapacity = 0;
+    /**
+     * Variable de membership.
+     */
+    private boolean support = false;
+    /**
+     * Variable de membership.
+     */
+    private String supportCoverage = null;
 
-
-    public String getDescription(){
+    /**
+     * metodo.
+     * @return des
+     */
+    public final String getDescription() {
         return description;
     }
+
+    /**
+     * Arraylist.
+     * @return null
+     */
     public abstract ArrayList getAllBenefits();
 
-    public void setDescription(String description) {
-        this.description = description;
+    /**
+     * Método de membership.
+     * @param myDescription description
+     */
+    public final void setDescription(final String myDescription) {
+        this.description = myDescription;
     }
 
-    public int getCloudStorage() {
+    /**
+     * Método de membership.
+     * @return storage
+     */
+    public final int getCloudStorage() {
         return cloudStorage;
     }
 
-    public void setCloudStorage(int cloudStorage) {
-        this.cloudStorage = cloudStorage;
+    /**
+     * Método de membership.
+     * @param myCloudStorage storage
+     */
+    public final void setCloudStorage(final int myCloudStorage) {
+        this.cloudStorage = myCloudStorage;
     }
 
-    public int getSimultaneousLogins() {
+    /**
+     * Método de membership.
+     * @return logins
+     */
+    public final int getSimultaneousLogins() {
         return simultaneousLogins;
     }
 
-    public void setSimultaneousLogins(int simultaneousLogins) {
-        this.simultaneousLogins = simultaneousLogins;
+    /**
+     * Método de membership.
+     * @param mySimultaneousLogins log
+     */
+    public final void setSimultaneousLogins(final int mySimultaneousLogins) {
+        this.simultaneousLogins = mySimultaneousLogins;
     }
 
-    public boolean isUnlimitedDevices() {
+    /**
+     * Método de membership.
+     * @return devices
+     */
+    public final boolean isUnlimitedDevices() {
         return unlimitedDevices;
     }
 
-    public void setUnlimitedDevices(boolean unlimitedDevices) {
-        this.unlimitedDevices = unlimitedDevices;
+    /**
+     * Método de membership.
+     * @param myUnlimitedDevices devices-
+     */
+    public final void setUnlimitedDevices(final boolean myUnlimitedDevices) {
+        this.unlimitedDevices = myUnlimitedDevices;
     }
 
-    public int getAllowedDevices() {
+    /**
+     * Método de membership.
+     * @return devices
+     */
+    public final int getAllowedDevices() {
         return allowedDevices;
     }
 
-    public void setAllowedDevices(int allowedDevices) {
-        this.allowedDevices = allowedDevices;
+    /**
+     * Método de membership.
+     * @param myAllowedDevices devices
+     */
+    public final void setAllowedDevices(final int myAllowedDevices) {
+        this.allowedDevices = myAllowedDevices;
     }
 
-    public double getCost() {
+    /**
+     * Método de membership.
+     * @return costo
+     */
+    public final double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    /**
+     * Método de membership.
+     * @param myCost costo
+     */
+    public final void setCost(final double myCost) {
+        this.cost = myCost;
     }
 
-    public int getDownloadCapacity() {
+    /**
+     * Método de membership.
+     * @return download
+     */
+    public final int getDownloadCapacity() {
         return downloadCapacity;
     }
 
-    public void setDownloadCapacity(int downloadCapacity) {
-        this.downloadCapacity = downloadCapacity;
+    /**
+     * Método de membership.
+     * @param myDownloadCapacity download
+     */
+    public final void setDownloadCapacity(final int myDownloadCapacity) {
+        this.downloadCapacity = myDownloadCapacity;
     }
 
-    public boolean isSupport() {
+    /**
+     * Método de membership.
+     * @return support
+     */
+    public final boolean isSupport() {
         return support;
     }
 
-    public void setSupport(boolean support) {
-        this.support = support;
+    /**
+     * Método de membership.
+     * @param mySupport support
+     */
+    public final void setSupport(final boolean mySupport) {
+        this.support = mySupport;
     }
 
-    public String getSupportCoverage() {
+    /**
+     * Método de membership.
+     * @return support
+     */
+    public final String getSupportCoverage() {
         return supportCoverage;
     }
 
-    public void setSupportCoverage(String supportCoverage) {
-        this.supportCoverage = supportCoverage;
+    /**
+     * Método de membership.
+     * @param mySupportCoverage coverage
+     */
+    public final void setSupportCoverage(final String mySupportCoverage) {
+        this.supportCoverage = mySupportCoverage;
     }
 }
