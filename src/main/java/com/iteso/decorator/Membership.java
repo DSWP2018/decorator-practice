@@ -21,10 +21,11 @@ private boolean support = false;
 private String supportCoverage = null;
 
 
+    private ArrayList<String> benefitArray = new ArrayList<>();
+    public ArrayList getAllBenefits() {return benefitArray;}
     public String getDescription(){
         return description;
     }
-    public abstract ArrayList getAllBenefits();
 
     public void setDescription(String description) {
         this.description = description;

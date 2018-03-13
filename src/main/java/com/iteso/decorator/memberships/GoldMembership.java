@@ -32,6 +32,7 @@ public class GoldMembership extends Membership {
         setUnlimitedDevices(UNLIMITED_DEVICES);
     }
 
+
     public ArrayList getAllBenefits() {
         return null;
     }
