@@ -1,96 +1,63 @@
 package com.iteso.decorator;
 
+import org.apache.commons.collections.iterators.ArrayListIterator;
+
 import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * User: rvillalobos
- * Date: 8/19/13
- * Time: 12:41 PM
- * To change this template use File | Settings | File Templates.
+ * User: Mariana Sierra
+ * Abstract class.
  */
 public abstract class Membership {
-    private String description = "Any Membership";
-private int cloudStorage = 0;
-private int simultaneousLogins = 0;
-private boolean unlimitedDevices = false;
-private int allowedDevices = 0;
-private double cost = 0;
-private int downloadCapacity = 0;
-private boolean support = false;
-private String supportCoverage = null;
 
+    /**Attributes of the basic Membership. */
+    private String description = "Membership"; /**Description of the membership. */
+    private double cost = 0; /**Actual cost of the membership. */
+    private ArrayList benefits; /**List of all the benefits. */
 
+    /**Method getDescription. /*
+     *
+     * @return a String with all the description.
+     */
     public String getDescription(){
         return description;
     }
-    public abstract ArrayList getAllBenefits();
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String newFeature){
+        this.description += newFeature;
     }
 
-    public int getCloudStorage() {
-        return cloudStorage;
+    /**Method getAllBenefits. /*
+     *
+     * @return an ArrayList with all the benefits.
+     */
+    public ArrayList getAllBenefits(){
+        return this.benefits;
     }
 
-    public void setCloudStorage(int cloudStorage) {
-        this.cloudStorage = cloudStorage;
+    /**Method setBenefit. /*
+     *
+     * @param benefit
+     */
+    public void setBenefits(String benefit){
+        benefits.add(benefit);
     }
 
-    public int getSimultaneousLogins() {
-        return simultaneousLogins;
-    }
-
-    public void setSimultaneousLogins(int simultaneousLogins) {
-        this.simultaneousLogins = simultaneousLogins;
-    }
-
-    public boolean isUnlimitedDevices() {
-        return unlimitedDevices;
-    }
-
-    public void setUnlimitedDevices(boolean unlimitedDevices) {
-        this.unlimitedDevices = unlimitedDevices;
-    }
-
-    public int getAllowedDevices() {
-        return allowedDevices;
-    }
-
-    public void setAllowedDevices(int allowedDevices) {
-        this.allowedDevices = allowedDevices;
-    }
-
+    /**Method getCost. /*
+     *
+     * @return get a double that represent the cost.
+     */
     public double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
+    /**Method setCost. /*
+     *
+     */
+    public void setCost(double cost){
+        this.cost += cost;
     }
 
-    public int getDownloadCapacity() {
-        return downloadCapacity;
-    }
 
-    public void setDownloadCapacity(int downloadCapacity) {
-        this.downloadCapacity = downloadCapacity;
-    }
-
-    public boolean isSupport() {
-        return support;
-    }
-
-    public void setSupport(boolean support) {
-        this.support = support;
-    }
-
-    public String getSupportCoverage() {
-        return supportCoverage;
-    }
-
-    public void setSupportCoverage(String supportCoverage) {
-        this.supportCoverage = supportCoverage;
-    }
 }

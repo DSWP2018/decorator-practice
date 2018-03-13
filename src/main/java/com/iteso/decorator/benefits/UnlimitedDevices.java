@@ -1,0 +1,34 @@
+package com.iteso.decorator.benefits;
+
+import com.iteso.decorator.Membership;
+
+/** Benefit UnlimitedDevices. /*
+ *
+ */
+public class UnlimitedDevices extends Benefits {
+
+    /**Information of the benefit. */
+    private final String UNLIMITED_DEVICES_NAME = "Unlimited Devices"; /**Name. */
+    private final double UNLIMITED_DEVICES_COST = 200.00; /** Cost. */
+
+
+    /**Constructor UnlimitedDevices. /*
+     *
+     * @param membership
+     */
+    public UnlimitedDevices(Membership membership){
+        this.membership = membership;
+        this.membership.setCost(UNLIMITED_DEVICES_COST);
+        this.membership.setDescription(getBenefitDescription());
+        this.membership.setBenefits(UNLIMITED_DEVICES_NAME);
+    }
+
+    /**Method getBenefitDescription. /*
+     *
+     * @return get the description of this benefit.
+     */
+    public String getBenefitDescription(){
+        return "+ " + UNLIMITED_DEVICES_NAME;
+    }
+
+}
