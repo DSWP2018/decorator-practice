@@ -15,7 +15,7 @@ public class BenefitUnlimitedDevices extends Benefits {
         super.setDescription("Unlimited devices");
         super.setCost(120.10);
         super.setUnlimitedDevices(true);
-    }
+    } 
 
     /**
      * Get this benefit.
