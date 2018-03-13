@@ -18,10 +18,13 @@ public class CloudStorage extends Benefits {
      * @param membership
      */
     public CloudStorage(Membership membership){
-        this.membership = membership;
-        this.membership.setCost(CLOUD_STORAGE_COST);
-        this.membership.setDescription(getBenefitDescription());
-        this.membership.setBenefits(CLOUD_STORAGE_NAME);
+        setAllBenefits(membership.getAllBenefits());
+        setNewDescription(membership.getDescription());
+        setCost(membership.getCost());
+
+        setCost(CLOUD_STORAGE_COST);
+        setDescription(getBenefitDescription());
+        setBenefits(CLOUD_STORAGE_NAME);
     }
 
     /**Method getBenefitDescription. /*

@@ -32,6 +32,14 @@ public abstract class Membership {
         this.description += " " + newFeature;
     }
 
+    /**Method setNewDescription. /*
+     *
+     * @param newDescription set a total new description.
+     */
+    public final void setNewDescription(final String newDescription) {
+        this.description = newDescription;
+    }
+
     /**Method getAllBenefits. /*
      *
      * @return an ArrayList with all the benefits.
@@ -48,6 +56,14 @@ public abstract class Membership {
         benefits.add(benefit);
     }
 
+    /**Method setAllBenefits. /*
+     *
+     * @param arrayBenefits set all the benefits.
+     */
+    public final void setAllBenefits(final ArrayList arrayBenefits) {
+        this.benefits = arrayBenefits;
+    }
+
     /**Method getCost. /*
      *
      * @return get a double that represent the cost.
@@ -62,6 +78,8 @@ public abstract class Membership {
     public final void setCost(final double newCost) {
         this.cost += newCost;
     }
+
+
 
 
 }

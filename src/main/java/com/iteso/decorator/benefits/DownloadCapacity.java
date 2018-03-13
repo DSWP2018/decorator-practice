@@ -19,10 +19,13 @@ public class DownloadCapacity extends Benefits {
      * @param membership
      */
     public DownloadCapacity(Membership membership){
-        this.membership = membership;
-        this.membership.setCost(DOWNLOAD_CAPACITY_COST);
-        this.membership.setDescription(getBenefitDescription());
-        this.membership.setBenefits(DOWNLOAD_CAPACITY_NAME);
+        setAllBenefits(membership.getAllBenefits());
+        setNewDescription(membership.getDescription());
+        setCost(membership.getCost());
+
+        setCost(DOWNLOAD_CAPACITY_COST);
+        setDescription(getBenefitDescription());
+        setBenefits(DOWNLOAD_CAPACITY_NAME);
     }
 
     /**Method getBenefitDescription. /*

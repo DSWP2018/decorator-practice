@@ -17,10 +17,13 @@ public class UnlimitedDevices extends Benefits {
      * @param membership
      */
     public UnlimitedDevices(Membership membership){
-        this.membership = membership;
-        this.membership.setCost(UNLIMITED_DEVICES_COST);
-        this.membership.setDescription(getBenefitDescription());
-        this.membership.setBenefits(UNLIMITED_DEVICES_NAME);
+        setAllBenefits(membership.getAllBenefits());
+        setNewDescription(membership.getDescription());
+        setCost(membership.getCost());
+
+        setCost(UNLIMITED_DEVICES_COST);
+        setDescription(getBenefitDescription());
+        setBenefits(UNLIMITED_DEVICES_NAME);
     }
 
     /**Method getBenefitDescription. /*

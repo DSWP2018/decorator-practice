@@ -17,14 +17,17 @@ public class UltimateMembership extends Benefits {
      * @param membership
      */
     public UltimateMembership(Membership membership){
-        this.membership = membership;
+        membership = new CloudStorage(membership);
+        membership = new Support(membership);
+        membership = new UnlimitedDevices(membership);
+        membership = new DownloadCapacity(membership);
+
+        setAllBenefits(membership.getAllBenefits());
+        setNewDescription(membership.getDescription());
+        setCost(membership.getCost());
+
         setDescription(getBenefitDescription());
-        this.membership.setDescription(getDescription());
         setBenefits(ULTIMATE_MEMBERSHIP_NAME);
-        this.membership = new CloudStorage(this);
-        this.membership = new Support(this);
-        this.membership = new UnlimitedDevices(this);
-        this.membership = new DownloadCapacity(this);
     }
 
     /**Method getBenefitDescription. /*

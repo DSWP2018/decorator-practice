@@ -15,10 +15,13 @@ public class Support extends Benefits {
      * @param membership
      */
     public Support(Membership membership){
-        this.membership = membership;
-        this.membership.setCost(SUPPORT_COST);
-        this.membership.setDescription(getBenefitDescription());
-        this.membership.setBenefits(SUPPORT_NAME);
+        setAllBenefits(membership.getAllBenefits());
+        setNewDescription(membership.getDescription());
+        setCost(membership.getCost());
+
+        setCost(SUPPORT_COST);
+        setDescription(getBenefitDescription());
+        setBenefits(SUPPORT_NAME);
     }
 
     /**Method getBenefitDescription. /*

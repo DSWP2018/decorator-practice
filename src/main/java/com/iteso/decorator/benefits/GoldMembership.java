@@ -18,14 +18,17 @@ public class GoldMembership extends Benefits {
      * @param membership
      */
     public GoldMembership(Membership membership){
-        this.membership = membership;
+        membership = new CloudStorage(membership);
+        membership = new Support(membership);
+
+        setAllBenefits(membership.getAllBenefits());
+        setNewDescription(membership.getDescription());
+        setCost(membership.getCost());
 
         setDescription(getBenefitDescription());
-        this.membership.setDescription(getDescription());
         setBenefits(GOLD_MEMBERSHIP_NAME);
 
-        this.membership = new CloudStorage(this);
-        this.membership = new Support(this);
+
     }
 
     /**Method getBenefitDescription. /*
