@@ -10,87 +10,44 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Membership {
-    private String description = "Any Membership";
-private int cloudStorage = 0;
-private int simultaneousLogins = 0;
-private boolean unlimitedDevices = false;
-private int allowedDevices = 0;
-private double cost = 0;
-private int downloadCapacity = 0;
-private boolean support = false;
-private String supportCoverage = null;
+    /**
+     * Arreglo con los beneficios objeto
+     */
+    private ArrayList benefits;
+    /**
+     * Costo de la membresia
+     */
+    private double cost=0;
 
-
-    public String getDescription(){
-        return description;
-    }
-    public abstract ArrayList getAllBenefits();
-
-    public void setDescription(String description) {
-        this.description = description;
+    /**
+     *
+     * @return todos los beneficios
+     */
+    public ArrayList getAllBenefits() {
+        return benefits;
     }
 
-    public int getCloudStorage() {
-        return cloudStorage;
+    /**
+     * Agrega un beneficio nuevo
+     * @param newBenefit
+     */
+    public final void setBenefit(final Membership newBenefit) {
+        benefits.add(newBenefit);
     }
 
-    public void setCloudStorage(int cloudStorage) {
-        this.cloudStorage = cloudStorage;
+    /**
+     * Altera el costo de la membresia
+     * @param cost
+     */
+    public void setCost(double cost) {
+        this.cost += cost;
     }
 
-    public int getSimultaneousLogins() {
-        return simultaneousLogins;
-    }
-
-    public void setSimultaneousLogins(int simultaneousLogins) {
-        this.simultaneousLogins = simultaneousLogins;
-    }
-
-    public boolean isUnlimitedDevices() {
-        return unlimitedDevices;
-    }
-
-    public void setUnlimitedDevices(boolean unlimitedDevices) {
-        this.unlimitedDevices = unlimitedDevices;
-    }
-
-    public int getAllowedDevices() {
-        return allowedDevices;
-    }
-
-    public void setAllowedDevices(int allowedDevices) {
-        this.allowedDevices = allowedDevices;
-    }
-
+    /**
+     *
+     * @return el costo
+     */
     public double getCost() {
         return cost;
     }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
-    public int getDownloadCapacity() {
-        return downloadCapacity;
-    }
-
-    public void setDownloadCapacity(int downloadCapacity) {
-        this.downloadCapacity = downloadCapacity;
-    }
-
-    public boolean isSupport() {
-        return support;
-    }
-
-    public void setSupport(boolean support) {
-        this.support = support;
-    }
-
-    public String getSupportCoverage() {
-        return supportCoverage;
-    }
-
-    public void setSupportCoverage(String supportCoverage) {
-        this.supportCoverage = supportCoverage;
-    }
-}
+  }
